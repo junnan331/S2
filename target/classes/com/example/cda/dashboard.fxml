@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cda.DashController">
+   <top>
+      <AnchorPane prefHeight="53.0" prefWidth="600.0" style="-fx-background-color: gold;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="addBtn" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#onAddBtnClick" text="Add event" />
+            <Button fx:id="showButton" layoutX="107.0" layoutY="15.0" mnemonicParsing="false" onAction="#onShowBtnClick" text="show event" />
+            <Label fx:id="logLabel" layoutX="416.0" layoutY="7.0" text="Hi! " />
+         </children>
+      </AnchorPane>
+   </top>
+   <left>
+      <AnchorPane prefHeight="347.0" prefWidth="238.0" style="-fx-background-color: grey;" BorderPane.alignment="CENTER">
+         <children>
+            <ScrollPane fx:id="scrollPane" prefHeight="349.0" prefWidth="241.0">
+               <content>
+                  <VBox fx:id="EventListVBox" prefHeight="345.0" prefWidth="233.0">
+                     <children>
+                        <ButtonBar prefHeight="40.0" prefWidth="200.0" />
+                     </children></VBox>
+               </content>
+            </ScrollPane>
+         </children></AnchorPane>
+   </left>
+   <right>
+      <StackPane prefHeight="347.0" prefWidth="378.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane fx:id="editPane" prefHeight="200.0" prefWidth="200.0" visible="false">
+               <children>
+                  <Button fx:id="submitBtn" layoutX="155.0" layoutY="308.0" mnemonicParsing="false" onAction="#onSubmitBtnClick" text="Submit" />
+                  <TextField fx:id="timeField" layoutX="97.0" layoutY="104.0" prefHeight="25.0" prefWidth="232.0" />
+                  <TextArea fx:id="descField" layoutX="96.0" layoutY="136.0" prefHeight="154.0" prefWidth="233.0" />
+                  <TextField fx:id="locationField" layoutX="97.0" layoutY="69.0" prefHeight="25.0" prefWidth="232.0" />
+                  <TextField fx:id="nameField" layoutX="96.0" layoutY="36.0" prefHeight="25.0" prefWidth="233.0" />
+                  <Text layoutX="24.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" wrappingWidth="74.693359375" />
+                  <Text layoutX="24.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Location" wrappingWidth="74.693359375" />
+                  <Text layoutX="24.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time" wrappingWidth="74.693359375" />
+                  <Text layoutX="24.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" wrappingWidth="74.693359375" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="detailsPane" prefHeight="200.0" prefWidth="200.0" visible="false">
+               <children>
+                  <Text fx:id="title111" layoutX="25.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="by">
+                     <font>
+                        <Font name="Calibri" size="14.0" />
+                     </font>
+                  </Text>
+                  <Label fx:id="eventnameText" layoutX="118.0" layoutY="14.0" prefHeight="23.0" prefWidth="131.0" text="event name">
+                     <font>
+                        <Font name="Verdana" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="creName" layoutX="53.0" layoutY="50.0" prefHeight="19.0" prefWidth="95.0" text="createrName">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="eventLocation" layoutX="25.0" layoutY="80.0" prefHeight="19.0" prefWidth="68.0" text="location">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="eventTime" layoutX="241.0" layoutY="51.0" prefHeight="17.0" prefWidth="60.0" text="eventTime" />
+                  <Label fx:id="description" layoutX="120.0" layoutY="118.0" prefHeight="24.0" prefWidth="120.0" text="Description">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="creRole" layoutX="271.0" layoutY="17.0" prefHeight="17.0" prefWidth="46.0" text="role" />
+                  <Label fx:id="desContent" alignment="TOP_LEFT" layoutX="62.0" layoutY="159.0" prefHeight="143.0" prefWidth="197.0" text="Label" />
+                  <Button fx:id="editBtn" layoutX="180.0" layoutY="302.0" mnemonicParsing="false" onAction="#onEditClick" text="Edit" visible="false" />
+                  <Button fx:id="deletBtn" layoutX="267.0" layoutY="303.0" mnemonicParsing="false" onAction="#onDeletClick" text="Delete" visible="false" />
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+   </right>
+</BorderPane>
